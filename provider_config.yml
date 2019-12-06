@@ -1,0 +1,147 @@
+---
+server:
+  port: 1004
+  context-path: /
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.47.134:3308/context?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application: # \u8BBE\u7F6E\u5E94\u7528\u7684\u57FA\u672C\u4FE1\u606F(\u540D\u79F0
+    name: microservice-student
+  profiles: provider-hystrix-1004
+
+eureka:
+  instance:
+    hostname: localhost  #eureka\u5BA2\u6237\u7AEF\u4E3B\u673A\u5B9E\u4F8B\u540D\u79F0
+    appname: microservice-student  #\u5BA2\u6237\u7AEF\u670D\u52A1\u540D
+    instance-id: microservice-student:1004 #\u5BA2\u6237\u7AEF\u5B9E\u4F8B\u540D\u79F0
+    prefer-ip-address: true #\u662F\u5426\u663E\u793AIP
+  client:
+    service-url:
+      #\u8BBE\u7F6E\u4E0EEureka\u6CE8\u518C\u4E2D\u5FC3\u4EA4\u4E92\u7684\u5730\u5740\uFF0C\u662F\u6240\u6709\u6CE8\u518C\u4E2D\u5FC3
+      defaultZone: http://eureka2001.javawwl.com:2001/eureka/,http://eureka2002.javawwl.com:2002/eureka/,http://eureka2003.javawwl.com:2003/eureka/   #\u628A\u670D\u52A1\u6CE8\u518C\u5230eureka\u6CE8\u518C\u4E2D\u5FC3
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+
+info:
+  groupId: com.liwangwang.springcloud
+  artifactId: microservice-student-provider-1004
+  version: 1.0-SNAPSHOT
+  userName: http://www.javawwl.com
+  phone: 123456
+
+---
+server:
+  port: 1005
+  context-path: /
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.47.134:3308/context?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application: # \u8BBE\u7F6E\u5E94\u7528\u7684\u57FA\u672C\u4FE1\u606F(\u540D\u79F0
+    name: microservice-student
+  profiles: provider-hystrix-1005
+
+eureka:
+  instance:
+    hostname: localhost  #eureka\u5BA2\u6237\u7AEF\u4E3B\u673A\u5B9E\u4F8B\u540D\u79F0
+    appname: microservice-student  #\u5BA2\u6237\u7AEF\u670D\u52A1\u540D
+    instance-id: microservice-student:1005 #\u5BA2\u6237\u7AEF\u5B9E\u4F8B\u540D\u79F0
+    prefer-ip-address: true #\u662F\u5426\u663E\u793AIP
+  client:
+    service-url:
+      #\u8BBE\u7F6E\u4E0EEureka\u6CE8\u518C\u4E2D\u5FC3\u4EA4\u4E92\u7684\u5730\u5740\uFF0C\u662F\u6240\u6709\u6CE8\u518C\u4E2D\u5FC3
+      defaultZone: http://eureka2001.javawwl.com:2001/eureka/,http://eureka2002.javawwl.com:2002/eureka/,http://eureka2003.javawwl.com:2003/eureka/   #\u628A\u670D\u52A1\u6CE8\u518C\u5230eureka\u6CE8\u518C\u4E2D\u5FC3
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+
+info:
+  groupId: com.liwangwang.springcloud
+  artifactId: microservice-student-provider-1005
+  version: 1.0-SNAPSHOT
+  userName: http://www.javawwl.com
+  phone: 123456
+
+---
+server:
+  port: 1006
+  context-path: /
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.47.134:3308/context?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application: # \u8BBE\u7F6E\u5E94\u7528\u7684\u57FA\u672C\u4FE1\u606F(\u540D\u79F0
+    name: microservice-student
+  profiles: provider-hystrix-1006
+
+eureka:
+  instance:
+    hostname: localhost  #eureka\u5BA2\u6237\u7AEF\u4E3B\u673A\u5B9E\u4F8B\u540D\u79F0
+    appname: microservice-student  #\u5BA2\u6237\u7AEF\u670D\u52A1\u540D
+    instance-id: microservice-student:1006 #\u5BA2\u6237\u7AEF\u5B9E\u4F8B\u540D\u79F0
+    prefer-ip-address: true #\u662F\u5426\u663E\u793AIP
+  client:
+    service-url:
+      #\u8BBE\u7F6E\u4E0EEureka\u6CE8\u518C\u4E2D\u5FC3\u4EA4\u4E92\u7684\u5730\u5740\uFF0C\u662F\u6240\u6709\u6CE8\u518C\u4E2D\u5FC3
+      defaultZone: http://eureka2001.javawwl.com:2001/eureka/,http://eureka2002.javawwl.com:2002/eureka/,http://eureka2003.javawwl.com:2003/eureka/   #\u628A\u670D\u52A1\u6CE8\u518C\u5230eureka\u6CE8\u518C\u4E2D\u5FC3
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+
+info:
+  groupId: com.liwangwang.springcloud
+  artifactId: microservice-student-provider-1006
+  version: 1.0-SNAPSHOT
+  userName: http://www.javawwl.com
+  phone: 123456
+
+
+
+
+
+
+
+
+
+
+
+
+
